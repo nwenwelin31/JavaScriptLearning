@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="gMonth"></p>
+    <script>
+        const d = new Date(2018, 11, 24, 10, 33);
+        document.getElementById("demo").innerHTML = d;
+        document.getElementById("demo1").innerHTML = d.toUTCString();
+        document.getElementById("demo2").innerHTML = d.toISOString();
+        document.getElementById("demo3").innerHTML = d.getFullYear();
+
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const t = new Date("2021-03-25");
+        let month = months[t.getMonth()];
+        document.getElementById("gMonth").innerHTML = month;
+    </script>
+</body>
+
+</html>
