@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Exercise</title>
+
+</head>
+
+<body>
+    <p id="demo">hello</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demoflower">hello</p>
+    <script>
+        //function
+        function myFunction(n1, n2) {
+            return n1 * n2;
+        }
+        document.getElementById("demo").innerHTML = myFunction(3, 4);
+
+        //Objects
+        const flower = { type: "rose", color: "white", price: "1500" };
+        document.getElementById('demoflower').innerHTML = "The flower of Color : " + flower.color;
+
+        //...Operator
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const year = [...q1, ...q2, ...q3];
+        document.getElementById("demo1").innerHTML = year;
+
+        //Precedence
+        document.getElementById("demo").innerHTML = 100 + 50 * 3;
+        document.getElementById("demo1").innerHTML = (100 + 50) * 3;
+
+        //String template
+        let firstName = "John";
+        let lastName = "Doe";
+        let text = `Welcome ${firstName} ${lastName}!`;
+        document.getElementById("demo2").innerHTML = text;
+
+        let header = "Template Strings";
+        let tags = ["template strings", "javascript", "es6"];
+        let html = `<h2>${header}</h2><ul>`;
+        for(const x of tags){
+            html+=`<li>${x}</li>`;
+        }
+        document.getElementById("demo3").innerHTML = html;
+    </script>
+
+</body>
+
+</html>
